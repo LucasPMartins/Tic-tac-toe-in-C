@@ -1,6 +1,6 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=bc121c&height=120&section=header"/>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=bc121c&size=45&center=true&vCenter=true&width=1000&lines=Jogo+da+Velha+\(TCD\)+)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=bc121c&size=45&center=true&vCenter=true&width=1000&lines=Tic-tac-toe)](https://git.io/typing-svg)
 
 ## ❔ About
 
