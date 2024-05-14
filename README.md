@@ -4,24 +4,26 @@
 
 ## ❔ About
 
-O Jogo da Velha é um classico jogo de tabuleiro, o projeto foi desenvolvido por dois alunos da Universidade Federal de Uberlândia como forma de fixar os conhecimentos de programacao em linguagem C adquiridos em sala de aula.
-Nesse projetos utilizado conseitos da linguagem C, como:
- - Condicionais
- - Laços
- - Funções
- - Arrays
- - Strings
- - Structs
- - Ponteiros
- - Alocação Dinâmica de Memória
- - Arquivos
- entre outros.
+The Tic-Tac-Toe game is a classic board game, developed by two students from the Federal University of Uberlândia as a way to solidify their programming knowledge in the C language acquired in the classroom.
 
-Como Jogar: 
-O objetivo do jogo eh preencher uma grade 3x3 com simbolos X e O de forma alternada, até que um dos jogadores consiga formar uma linha reta horizontal, vertical ou diagonal. 
+This project utilizes concepts from the C language, such as:
+
+- Conditionals
+- Loops
+- Functions
+- Arrays
+- Strings
+- Structs
+- Pointers
+- Dynamic Memory Allocation
+- File Handling
+- among others.
+
+**How to Play**:
+The objective of the game is to fill a 3x3 grid with alternating X and O symbols until one of the players manages to form a straight line horizontally, vertically, or diagonally.
 
 > [!Note]
-> O programa pode não funcionar muito bem em outros sistemas operacionais, me desculpe :(
+> The program may not work very well on other operating systems, I'm sorry :(
 
 ## 🤝 Contributors
 [![devlucasA](https://github.com/devlucasA.png?size=60)](https://github.com/devlucasA "Lucas Araújo de Oliveira on GitHub")
