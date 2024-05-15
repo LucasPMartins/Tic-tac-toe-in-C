@@ -29,6 +29,7 @@ void print_logo();
 
 Player *lerRanking(const char *nomeArquivo, int *tamanho);
 void salvarRanking(const char *nomeArquivo, Player *ranking, int tamanho);
+void printRanking(Player *jogadores, int numJogadores);
 
 Player *adicionarJogador(Player *jogadores, int *numJogadores);
 Player *retornaJogador(Player *jogadores, int numJogadores, char *nome, char *senha);
@@ -261,19 +262,7 @@ int main()
             }
             if (indiceSelecionado == 1) // RANKING
             {
-                system("cls"); // Limpa a tela
-                printf(".------------------------------------------.\n");
-                printf("|");
-                printf(ANSI_COLOR_YELLOW);
-                printf("               R A N K I N G              ");
-                printf(ANSI_COLOR_RESET);
-                printf("|\n");
-                printf("'------------------------------------------'\n\n");
-                printf("      Nome:      Vitorias:      Derrotas:     \n\n");
-                for (i = 0; i < numJogadores && i < 10; i++)
-                {
-                    printf("%d -   %s\t\t%d\t\t%d\n", i + 1, jogadores[i].nome, jogadores[i].vitorias, jogadores[i].derrotas);
-                }
+                printRanking(jogadores, numJogadores);
                 printf("\n");
                 printf(ANSI_COLOR_YELLOW);
                 system("pause");
@@ -1208,4 +1197,35 @@ void printMenuJogar(Player *jogador)
     printf(ANSI_COLOR_YELLOW);
     printf("%d\n\n", jogador->derrotas);
     printf(ANSI_COLOR_RESET);
+}
+
+void printRanking(Player *jogadores, int numJogadores)
+{
+    // Ordenar o vetor de jogadores de acordo com as vitórias
+    // Exemplo de ordenação simples por inserção
+    for (int i = 1; i < numJogadores && i < 10; i++)
+    {
+        Player temp = jogadores[i];
+        int j = i - 1;
+        while (j >= 0 && jogadores[j].vitorias < temp.vitorias)
+        {
+            jogadores[j + 1] = jogadores[j];
+            j--;
+        }
+        jogadores[j + 1] = temp;
+    }
+    system("cls"); // Limpa a tela
+    printf(".------------------------------------------.\n");
+    printf("|");
+    printf(ANSI_COLOR_YELLOW);
+    printf("               R A N K I N G              ");
+    printf(ANSI_COLOR_RESET);
+    printf("|\n");
+    printf("'------------------------------------------'\n\n");
+    printf("      Nome:      Vitorias:      Derrotas:     \n\n");
+    // Imprimir o ranking
+    for (int i = 0; i < numJogadores && i < 10; i++)
+    {
+        printf("%d -   %s\t\t%d\t\t%d\n", (i) + 1, jogadores[i].nome, jogadores[i].vitorias, jogadores[i].derrotas);
+    }
 }
