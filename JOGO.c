@@ -725,14 +725,15 @@ Player *retornaJogador(Player *jogadores, int numJogadores, char *nome, char *se
 void iniciarJogo(Player *jogador, int dificulade)
 {
     int board[3][3]; // 0 = vazio , 1 = x, 2 = o
-    int sair = 0;
+    int sair;
     char tecla;
     int x, y;
     do
     {
         inicializaBoard(board);
+        sair = 0;
         // Inicio do JOGO
-        while (espacoVazio(board))
+        while (espacoVazio(board) && sair == 0)
         {
             printMenuJogar(jogador);
             printBoard(board);
@@ -751,11 +752,33 @@ void iniciarJogo(Player *jogador, int dificulade)
                 printf(ANSI_COLOR_RESET);
                 y = y - 1;
                 x = x - 1;
-                if (board[x][y] == 0) // posicao valida
+                if (board[x][y] == 0 && x >= 0 && x < 3 && y >= 0 && y < 3) // posicao valida
                 {
                     board[x][y] = 1;
+                    if (verificaVitoria(board) == 1) // jogador venceu
+                    {
+                        jogador->vitorias++;
+                        printMenuJogar(jogador);
+                        printBoard(board);
+                        printf(ANSI_COLOR_GREEN);
+                        printf("\nVoce VENCEU! Parabens, %s.\n\n", jogador->nome);
+                        printf(ANSI_COLOR_RESET);
+                        sair = 1;
+                        break;
+                    }
                     bot(board, dificulade);
-                    sair = 1;
+                    if (verificaVitoria(board) == 2) // bot venceu
+                    {
+                        jogador->derrotas++;
+                        printMenuJogar(jogador);
+                        printBoard(board);
+                        printf(ANSI_COLOR_RED);
+                        printf("\nVoce PERDEU! Talvez na proxima, %s.\n\n", jogador->nome);
+                        printf(ANSI_COLOR_RESET);
+                        sair = 1;
+                        break;
+                    }
+                    break;
                 }
                 else // Posicao invalida
                 {
@@ -763,38 +786,19 @@ void iniciarJogo(Player *jogador, int dificulade)
                     printf("\nPosicao invalida, tente outra por favor!\n\n");
                     printf(ANSI_COLOR_RESET);
                 }
-            } while (sair != 1);
-            sair = 0;
-            if (verificaVitoria(board) == 1) // jogador venceu
-            {
-                jogador->vitorias++;
-                printMenuJogar(jogador);
-                printBoard(board);
-                printf(ANSI_COLOR_GREEN);
-                printf("\nVoce VENCEU! Parabens, %s.\n\n", jogador->nome);
-                printf(ANSI_COLOR_RESET);
-                break;
-            }
-            else if (verificaVitoria(board) == 2) // bot venceu
-            {
-                jogador->derrotas++;
-                printMenuJogar(jogador);
-                printBoard(board);
-                printf(ANSI_COLOR_RED);
-                printf("\nVoce PERDEU! Talvez na proxima, %s.\n\n", jogador->nome);
-                printf(ANSI_COLOR_RESET);
-                break;
-            }
-            else if (verificaVitoria(board) == 0 && espacoVazio(board) == 0) // EMPATE
+            } while (1);
+            if (verificaVitoria(board) == 0 && espacoVazio(board) == 0) // EMPATE
             {
                 printMenuJogar(jogador);
                 printBoard(board);
                 printf(ANSI_COLOR_BLUE);
                 printf("\nEMPATE! Talvez na proxima, %s.\n\n", jogador->nome);
                 printf(ANSI_COLOR_RESET);
+                sair = 1;
                 break;
             }
         }
+        sair = 0;
         // Fim do JOGO
         printf(ANSI_COLOR_YELLOW);
         printf("Pressione 'Enter' para JOGAR ou 'Esc' para VOLTAR...\n\n");
