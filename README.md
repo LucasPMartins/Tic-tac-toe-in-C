@@ -4,7 +4,7 @@
 
 ## ❔ About
 
-The Tic-Tac-Toe game is a classic board game, developed by two students from the Federal University of Uberlândia as a way to solidify their programming knowledge in the C language acquired in the classroom.
+The Tic-Tac-Toe game is a classic board game, this project was developed by two students from the Federal University of Uberlândia as a way to solidify their programming knowledge in the C language acquired in the classroom.
 
 This project utilizes concepts from the C language, such as:
 
