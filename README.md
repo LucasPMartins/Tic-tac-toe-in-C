@@ -40,11 +40,11 @@ The objective of the game is to fill a 3x3 grid with alternating X and O symbols
 
 <div style="display: flex; align-items: center;">
     <div style="flex: 1;">
-        <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/7dbb0255-b85e-437d-8ec5-c39dcebb58e5" alt="Imagem Maior" width="484" height="564" style="width: 0%;">
+        <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/e7c2cb9d-7df7-4cec-8644-5b6eca73bc86" alt="Imagem Maior" ">
     </div>
     <div style="display: flex; flex-direction: column; justify-content: space-between;">
-        <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/37891720-f74a-4ba6-8d37-25598337ff8f" alt="Imagem 2" width="401" height="267" style="width: 0%;">
-        <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/339ba429-99a8-4f54-85ab-05e033bdac6d" alt="Imagem 3" width="400" height="219" style="width: 0%;">
+        <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/37891720-f74a-4ba6-8d37-25598337ff8f" alt="Imagem 2" ">
+        <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/339ba429-99a8-4f54-85ab-05e033bdac6d" alt="Imagem 3"">
     </div>
 </div>
 
