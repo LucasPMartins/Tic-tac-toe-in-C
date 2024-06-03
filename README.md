@@ -23,7 +23,7 @@ This project utilizes concepts from the C language, such as:
 The objective of the game is to fill a 3x3 grid with alternating X and O symbols until one of the players manages to form a straight line horizontally, vertically, or diagonally.
 
 > [!Note]
-> The program may not work very well on other operating systems, I'm sorry :(
+> The program may not work very well on other operating systems and it's in Portuguese, I'm sorry :(
 
 ## 🤝 Contributors
 [![devlucasA](https://github.com/devlucasA.png?size=60)](https://github.com/devlucasA "Lucas Araújo de Oliveira on GitHub")
