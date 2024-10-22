@@ -1120,7 +1120,7 @@ void bot(int Board[3][3], int Dificuldade)
                 else
                     Board[1][1] = 2;
                 return;
-            } // Prevê vitoria
+            } // Prevê vitoria do bot
             for (i = 0; i < 3; i++)
             {
                 for (j = 0; j < 3; j++)
@@ -1130,6 +1130,16 @@ void bot(int Board[3][3], int Dificuldade)
                         Board[i][j] = 2;
                         if (verificaVitoria(Board) == 2)
                             return;
+                        Board[i][j] = 0;
+                    }
+                }
+            } // Prevê vitoria do jogador
+             for (i = 0; i < 3; i++)
+            {
+                for (j = 0; j < 3; j++)
+                {
+                    if (Board[i][j] == 0)
+                    {
                         Board[i][j] = 1;
                         if (verificaVitoria(Board) == 1)
                         {
