@@ -6,6 +6,25 @@
 
 The Tic-Tac-Toe game is a classic board game, this project was developed by two students from the Federal University of Uberlândia as a way to solidify their programming knowledge in the C language acquired in the classroom.
 
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/82e69e6d-fb30-47b3-b273-99f9671e669b" alt="Imagem Maior 1" width="500" />
+    </td>
+    <td>
+      <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/977af5d3-5ea3-49fb-b2ba-d50a93cc268e" alt="Imagem Maior 2" width="500" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/339ba429-99a8-4f54-85ab-05e033bdac6d" alt="Imagem 3" width="600" />
+    </td>
+    <td>
+      <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/37891720-f74a-4ba6-8d37-25598337ff8f" alt="Imagem 2" width="550" />
+    </td>
+  </tr>
+</table>
+
 This project utilizes concepts from the C language, such as:
 
 - Conditionals
@@ -37,25 +56,5 @@ The objective of the game is to fill a 3x3 grid with alternating X and O symbols
 
 ## 👨‍💻 Programming Language
 ![C](https://img.shields.io/badge/c-0D1117?style=for-the-badge&logo=c&logoColor=0a58ee) 
-
-<table>
-  <tr>
-    <td>
-      <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/82e69e6d-fb30-47b3-b273-99f9671e669b" alt="Imagem Maior 1" width="500" />
-    </td>
-    <td>
-      <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/977af5d3-5ea3-49fb-b2ba-d50a93cc268e" alt="Imagem Maior 2" width="500" />
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/339ba429-99a8-4f54-85ab-05e033bdac6d" alt="Imagem 3" width="600" />
-    </td>
-    <td>
-      <img src="https://github.com/LucasPMartins/Tic-tac-toe-in-C/assets/127567616/37891720-f74a-4ba6-8d37-25598337ff8f" alt="Imagem 2" width="550" />
-    </td>
-  </tr>
-</table>
-
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=bc121c&height=120&section=footer"/>
